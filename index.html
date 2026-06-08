@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fisher Employee: The premium, ultimate, all-in-one workforce and employee management dashboard for modern teams. Streamline HR, track attendance, run payroll, and optimize shifts.">
+  <title>Fisher Employee | Modern Employee Management Platform</title>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Dynamic Aesthetic Blobs -->
+  <div class="blob-container">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- Header Section -->
+  <header id="main-header">
+    <div class="nav-container">
+      <a href="#" class="logo" id="header-logo">
+        <i class="fa-solid fa-layer-group"></i> Fisher Employee
+      </a>
+      
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#" class="active" id="nav-home">Home</a></li>
+        <li><a href="#demo" id="nav-demo">Live Sandbox</a></li>
+        <li><a href="#features" id="nav-features">Features</a></li>
+        <li><a href="#testimonials" id="nav-testimonials">Testimonials</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Theme Switcher -->
+        <div class="theme-switch-container">
+          <button class="theme-switch" id="theme-toggler" aria-label="Toggle light/dark theme">
+            <i class="fa-solid fa-sun"></i>
+            <i class="fa-solid fa-moon"></i>
+            <span class="theme-switch-ball"></span>
+          </button>
+        </div>
+        
+        <a href="#demo" class="btn btn-secondary" id="btn-login">Try Demo</a>
+        <a href="#cta-section" class="btn btn-primary" id="btn-signup">Get Started</a>
+
+        <button class="hamburger" id="hamburger-menu" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-grid">
+      <div class="hero-content reveal active">
+        <div class="badge" id="hero-platform-badge">
+          <i class="fa-solid fa-sparkles"></i> The Future of Workforce Management
+        </div>
+        <h1 class="hero-title" id="hero-main-title">
+          Streamline Your <span class="gradient-text">Workforce</span> & Empower Teams
+        </h1>
+        <p class="hero-desc" id="hero-description">
+          An intuitive, design-forward platform to manage profiles, track attendance, oversee shift logs, and orchestrate payroll. Experience effortless team coordination.
+        </p>
+        <div class="hero-buttons">
+          <a href="#demo" class="btn btn-primary" id="hero-btn-sandbox">
+            <i class="fa-solid fa-circle-play"></i> Enter Live Sandbox
+          </a>
+          <a href="#features" class="btn btn-secondary" id="hero-btn-features">
+            Explore Features
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal active">
+        <div class="hero-card-showcase" id="hero-graphic">
+          <!-- Main Floating Glass Card -->
+          <div class="floating-card fc-main">
+            <div class="card-header-mock">
+              <div class="dot-indicators">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <span class="badge-mock active">Live Sync</span>
+            </div>
+            
+            <div class="user-row-mock">
+              <div class="avatar-mock">JD</div>
+              <div class="user-mock-info">
+                <div class="user-mock-name">Jordan Vance</div>
+                <div class="user-mock-role">Lead Engineer</div>
+              </div>
+              <span class="badge-mock active">Active</span>
+            </div>
+
+            <div class="user-row-mock">
+              <div class="avatar-mock">SA</div>
+              <div class="user-mock-info">
+                <div class="user-mock-name">Sarah Alvi</div>
+                <div class="user-mock-role">UX Researcher</div>
+              </div>
+              <span class="badge-mock leave">On Leave</span>
+            </div>
+
+            <div class="user-row-mock">
+              <div class="avatar-mock">MR</div>
+              <div class="user-mock-info">
+                <div class="user-mock-name">Mogith Raj</div>
+                <div class="user-mock-role">Product Manager</div>
+              </div>
+              <span class="badge-mock active">Active</span>
+            </div>
+          </div>
+
+          <!-- Secondary Decorative Cards -->
+          <div class="floating-card fc-sub-1">
+            <div style="font-size: 0.75rem; opacity: 0.9; margin-bottom: 0.25rem;">PROCESSED PAYROLL</div>
+            <div style="font-size: 1.75rem; font-weight: 800; font-family: 'Outfit';">$45,820</div>
+            <div style="font-size: 0.75rem; color: #10b981; margin-top: 0.25rem;">
+              <i class="fa-solid fa-arrow-up"></i> +12% this month
+            </div>
+          </div>
+
+          <div class="floating-card fc-sub-2">
+            <div style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 0.25rem;">TEAM CAPACITY</div>
+            <div style="font-size: 1.5rem; font-weight: 700; font-family: 'Outfit'; color: var(--text-primary);">94.8%</div>
+            <div style="width: 100%; height: 6px; background: var(--border-glass); border-radius: 10px; margin-top: 0.5rem; overflow: hidden;">
+              <div style="width: 94.8%; height: 100%; background: var(--accent); border-radius: 10px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats" id="quick-stats">
+    <div class="stats-container">
+      <div class="stat-item reveal">
+        <div class="stat-number" id="stat-active-users">99.8%</div>
+        <div class="stat-label">System Uptime</div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-number" id="stat-time-saved">40h</div>
+        <div class="stat-label">Saved Per Admin/Mo</div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-number" id="stat-retention">98%</div>
+        <div class="stat-label">Retention Rate</div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-number" id="stat-companies">2,500+</div>
+        <div class="stat-label">Trusted Teams</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Sandbox Section -->
+  <section class="interactive-demo reveal" id="demo">
+    <div class="section-header">
+      <span class="section-subtitle">Hands-on Experience</span>
+      <h2 class="section-title">Live Interactive Sandbox</h2>
+      <p class="section-desc">Test-drive the core employee list dashboard interface. Add team members, update attendance status, and see calculations adjust in real-time.</p>
+    </div>
+
+    <div class="dashboard-showcase" id="dashboard-app">
+      <!-- Dashboard Header -->
+      <div class="dash-header">
+        <div class="dash-logo" id="dash-main-logo">
+          <i class="fa-solid fa-house-laptop"></i> Fisher HQ Workspace
+        </div>
+        <div class="dash-actions-bar">
+          <span class="emp-status active" id="sandbox-status-pill">
+            <span class="status-dot"></span> Sandbox Session Active
+          </span>
+        </div>
+      </div>
+
+      <!-- Dashboard Statistics Row -->
+      <div class="dash-stats-grid">
+        <div class="dash-stat-card" id="dash-card-total">
+          <div class="dash-card-icon">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <div class="dash-card-info">
+            <div class="dash-card-num" id="total-count">3</div>
+            <div class="dash-card-label">Total Staff</div>
+          </div>
+        </div>
+
+        <div class="dash-stat-card stat-active" id="dash-card-on-duty">
+          <div class="dash-card-icon">
+            <i class="fa-solid fa-user-check"></i>
+          </div>
+          <div class="dash-card-info">
+            <div class="dash-card-num" id="on-duty-count">2</div>
+            <div class="dash-card-label">On Duty Today</div>
+          </div>
+        </div>
+
+        <div class="dash-stat-card stat-percentage" id="dash-card-attendance">
+          <div class="dash-card-icon">
+            <i class="fa-solid fa-chart-simple"></i>
+          </div>
+          <div class="dash-card-info">
+            <div class="dash-card-num" id="attendance-rate">66%</div>
+            <div class="dash-card-label">Attendance Rate</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dashboard Workspace Table & Control Panel -->
+      <div class="dash-workspace">
+        <!-- Left Side: Employee List -->
+        <div class="employee-section">
+          <div class="section-head-flex">
+            <h3 style="font-family: 'Outfit';">Employee Directory</h3>
+            <span style="font-size: 0.8rem; color: var(--text-secondary);" id="directory-count-label">Showing 3 active entries</span>
+          </div>
+
+          <div class="dash-table-wrapper">
+            <table class="employee-table" id="roster-table">
+              <thead>
+                <tr>
+                  <th>Employee</th>
+                  <th>Department</th>
+                  <th>Attendance Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="employee-list-body">
+                <!-- Appended dynamically by app.js, loaded with initial states -->
+                <tr id="emp-row-1">
+                  <td>
+                    <div class="employee-profile">
+                      <div class="emp-avatar">MR</div>
+                      <div>
+                        <div style="font-weight:600;">Mogith Raj</div>
+                        <div style="font-size: 0.75rem; color: var(--text-secondary);">mogith@fisher.com</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>Product</td>
+                  <td>
+                    <span class="emp-status active" onclick="toggleEmployeeStatus(1)" style="cursor:pointer;" title="Click to cycle status">
+                      <span class="status-dot"></span> On Duty
+                    </span>
+                  </td>
+                  <td>
+                    <button class="action-btn-delete" onclick="deleteEmployee(1)" aria-label="Delete Mogith Raj">
+                      <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr id="emp-row-2">
+                  <td>
+                    <div class="employee-profile">
+                      <div class="emp-avatar" style="background: linear-gradient(135deg, #10b981, #059669)">SA</div>
+                      <div>
+                        <div style="font-weight:600;">Sarah Alvi</div>
+                        <div style="font-size: 0.75rem; color: var(--text-secondary);">sarah.a@fisher.com</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>Design</td>
+                  <td>
+                    <span class="emp-status leave" onclick="toggleEmployeeStatus(2)" style="cursor:pointer;" title="Click to cycle status">
+                      <span class="status-dot"></span> On Leave
+                    </span>
+                  </td>
+                  <td>
+                    <button class="action-btn-delete" onclick="deleteEmployee(2)" aria-label="Delete Sarah Alvi">
+                      <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr id="emp-row-3">
+                  <td>
+                    <div class="employee-profile">
+                      <div class="emp-avatar" style="background: linear-gradient(135deg, #3b82f6, #0891b2)">JV</div>
+                      <div>
+                        <div style="font-weight:600;">Jordan Vance</div>
+                        <div style="font-size: 0.75rem; color: var(--text-secondary);">jordan.v@fisher.com</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>Engineering</td>
+                  <td>
+                    <span class="emp-status active" onclick="toggleEmployeeStatus(3)" style="cursor:pointer;" title="Click to cycle status">
+                      <span class="status-dot"></span> On Duty
+                    </span>
+                  </td>
+                  <td>
+                    <button class="action-btn-delete" onclick="deleteEmployee(3)" aria-label="Delete Jordan Vance">
+                      <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Right Side: Adding Controls -->
+        <div class="control-panel">
+          <h3 id="panel-form-title">Onboard Employee</h3>
+          
+          <form id="add-employee-form" onsubmit="handleFormSubmit(event)">
+            <div class="form-group" style="margin-bottom: 1rem;">
+              <label for="emp-name">Full Name</label>
+              <input type="text" id="emp-name" class="form-control" placeholder="e.g., Jane Doe" required>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 1rem;">
+              <label for="emp-email">Email Address</label>
+              <input type="email" id="emp-email" class="form-control" placeholder="e.g., jane@company.com" required>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 1.25rem;">
+              <label for="emp-dept">Department</label>
+              <select id="emp-dept" class="form-control">
+                <option value="Engineering">Engineering</option>
+                <option value="Product">Product</option>
+                <option value="Design">Design</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Operations">Operations</option>
+              </select>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 1.5rem;">
+              <label for="emp-status">Initial Status</label>
+              <select id="emp-status" class="form-control">
+                <option value="active">On Duty</option>
+                <option value="remote">Remote Work</option>
+                <option value="leave">On Leave</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 10px;" id="btn-submit-employee">
+              <i class="fa-solid fa-user-plus"></i> Add To Roster
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features List Section -->
+  <section class="features reveal" id="features">
+    <div class="section-header">
+      <span class="section-subtitle">Features</span>
+      <h2 class="section-title">Built to Handle Every Detail</h2>
+      <p class="section-desc">Experience a comprehensive suite of workforce operations built to eliminate admin bottlenecks and foster transparent team dynamics.</p>
+    </div>
+
+    <div class="features-grid">
+      <!-- Feature Card 1 -->
+      <div class="feature-card">
+        <div class="feature-icon" id="feat-icon-attendance">
+          <i class="fa-solid fa-user-clock"></i>
+        </div>
+        <h3 class="feature-title" id="feat-title-attendance">Attendance Tracker</h3>
+        <p class="feature-desc">Monitor employee status, remote sign-ins, and leave allocations automatically in real-time, syncing directly to global calendar views.</p>
+      </div>
+
+      <!-- Feature Card 2 -->
+      <div class="feature-card">
+        <div class="feature-icon" id="feat-icon-payroll">
+          <i class="fa-solid fa-credit-card"></i>
+        </div>
+        <h3 class="feature-title" id="feat-title-payroll">Smart Payroll Automations</h3>
+        <p class="feature-desc">Compute complex hourly tracking rates, tax deductions, bonuses, and reimbursements directly with one-click direct deposit actions.</p>
+      </div>
+
+      <!-- Feature Card 3 -->
+      <div class="feature-card">
+        <div class="feature-icon" id="feat-icon-shifts">
+          <i class="fa-solid fa-calendar-days"></i>
+        </div>
+        <h3 class="feature-title" id="feat-title-shifts">Shift & Scheduling</h3>
+        <p class="feature-desc">Build optimized, drag-and-drop calendars in seconds. Let team members swap shifts easily, minimizing communication gaps and scheduling disputes.</p>
+      </div>
+
+      <!-- Feature Card 4 -->
+      <div class="feature-card">
+        <div class="feature-icon" id="feat-icon-analytics">
+          <i class="fa-solid fa-chart-pie"></i>
+        </div>
+        <h3 class="feature-title" id="feat-title-analytics">Talent Analytics</h3>
+        <p class="feature-desc">Gain insights into workforce attrition rates, productivity peaks, shift utilization factors, and overtime payout allocations instantly.</p>
+      </div>
+
+      <!-- Feature Card 5 -->
+      <div class="feature-card">
+        <div class="feature-icon" id="feat-icon-portal">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <h3 class="feature-title" id="feat-title-portal">Self-Service Portal</h3>
+        <p class="feature-desc">Allow employees to manage profiles, apply for leave, retrieve check stubs, and register shifts without direct admin interventions.</p>
+      </div>
+
+      <!-- Feature Card 6 -->
+      <div class="feature-card">
+        <div class="feature-icon" id="feat-icon-integrations">
+          <i class="fa-solid fa-plug"></i>
+        </div>
+        <h3 class="feature-title" id="feat-title-integrations">Enterprise Integration</h3>
+        <p class="feature-desc">Sync effortlessly with corporate tools like Slack, MS Teams, Google Workspace, and major payroll databases via secure API endpoints.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials reveal" id="testimonials">
+    <div class="section-header">
+      <span class="section-subtitle">Testimonials</span>
+      <h2 class="section-title">Endorsed by Top People Leaders</h2>
+      <p class="section-desc">Read how scaling organizations are leverage Fisher Employee to optimize daily HR operations and improve work cultures.</p>
+    </div>
+
+    <div class="testimonials-slider">
+      <div class="testimonial-track" id="testimonial-container">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card" id="test-card-1">
+          <div class="quote-icon">“</div>
+          <p class="testimonial-text">"Fisher Employee has entirely revolutionized our scheduling systems. What used to take three managers 10 hours a week to map out is now completely auto-scheduled. The interface is stunning and my team loves using the self-service app."</p>
+          <div class="testimonial-user">
+            <div class="avatar-mock" style="width: 56px; height: 56px; border: 2px solid var(--accent); display:flex; align-items:center; justify-content:center; font-size:1.25rem;">KL</div>
+            <div class="user-details">
+              <h4 id="test-user-name-1">Katherine Lang</h4>
+              <p id="test-user-title-1">VP of Operations, Linear Tech</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card" id="test-card-2" style="display: none;">
+          <div class="quote-icon">“</div>
+          <p class="testimonial-text">"Transitioning our 150-person remote team to Fisher Employee was practically seamless. Attendance reporting is intuitive and integrating payroll metrics has cut down our month-end reconciliation cycles by more than half."</p>
+          <div class="testimonial-user">
+            <div class="avatar-mock" style="width: 56px; height: 56px; border: 2px solid var(--accent); display:flex; align-items:center; justify-content:center; font-size:1.25rem;">DM</div>
+            <div class="user-details">
+              <h4 id="test-user-name-2">David Miller</h4>
+              <p id="test-user-title-2">HR Director, CloudScale</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card" id="test-card-3" style="display: none;">
+          <div class="quote-icon">“</div>
+          <p class="testimonial-text">"The dashboard analytics alone are worth the migration. Being able to spot team burnout trends early and track seasonal shift allocations accurately has allowed us to increase retention rates by 18%."</p>
+          <div class="testimonial-user">
+            <div class="avatar-mock" style="width: 56px; height: 56px; border: 2px solid var(--accent); display:flex; align-items:center; justify-content:center; font-size:1.25rem;">CH</div>
+            <div class="user-details">
+              <h4 id="test-user-name-3">Cynthia Huang</h4>
+              <p id="test-user-title-3">Chief People Officer, Hyperion Inc</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-dots" id="testimonial-dots">
+        <span class="slider-dot active" onclick="showTestimonial(0)" aria-label="Show testimonial 1"></span>
+        <span class="slider-dot" onclick="showTestimonial(1)" aria-label="Show testimonial 2"></span>
+        <span class="slider-dot" onclick="showTestimonial(2)" aria-label="Show testimonial 3"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta reveal" id="cta-section">
+    <div class="cta-container">
+      <h2 class="cta-title" id="cta-headline">Ready to Supercharge Your HR Workflow?</h2>
+      <p class="cta-desc" id="cta-subheadline">Join over 2,500 progressive companies building balanced, streamlined work environments. Start your 14-day free trial today. No card required.</p>
+      <div class="cta-buttons">
+        <a href="#demo" class="btn btn-primary cta-btn-white" id="cta-btn-start">
+          Get Started For Free
+        </a>
+        <a href="mailto:info@fisheremployee.com" class="btn btn-secondary cta-btn-outline" id="cta-btn-sales">
+          Contact Enterprise Sales
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo" id="footer-logo">
+          <i class="fa-solid fa-layer-group"></i> Fisher Employee
+        </a>
+        <p class="footer-desc" id="footer-branding-desc">Modern HR infrastructure designed to coordinate, pay, and scale talent in real-time.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="social-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Product</h4>
+        <ul class="footer-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#demo">Live Sandbox</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Roadmap</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Resources</h4>
+        <ul class="footer-links">
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Security & Trust</a></li>
+          <li><a href="#">API Documentation</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Company</h4>
+        <ul class="footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press Kit</a></li>
+          <li><a href="#">Contact Support</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy" id="copyright-label">&copy; 2026 Fisher Employee Inc. All rights reserved.</p>
+      <ul class="footer-legal">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Cookie Settings</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Script Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
