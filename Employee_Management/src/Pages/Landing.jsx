@@ -1,6 +1,7 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Anchor, Eye, EyeOff } from 'lucide-react'
-import logoImg from '../assets/Images/logo.png'
+import logoImg from '../assets/Images/KDTlogo.png'
 
 // High-fidelity vector illustration of the Wellagama Harbor fishing boat
 const BoatIllustration = () => (
@@ -103,6 +104,7 @@ const BoatIllustration = () => (
 )
 
 export default function Landing({ onLoginSuccess }) {
+  const navigate = useNavigate()
   const [email, setEmail] = useState('admin@fisheries.lk')
   const [password, setPassword] = useState('')
   const [showPassword, setShowPassword] = useState(false)
@@ -134,6 +136,7 @@ export default function Landing({ onLoginSuccess }) {
       if (onLoginSuccess) {
         onLoginSuccess({ email, rememberMe })
       }
+      setTimeout(() => navigate('/dashboard'), 500)
     }, 1200)
   }
 

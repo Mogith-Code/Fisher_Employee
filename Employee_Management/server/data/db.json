@@ -1,0 +1,128 @@
+{
+  "fisheries_employees": [],
+  "fisheries_fish_varieties": [
+    {
+      "id": "1782933652157-8q3h1zvv8-balaya",
+      "name": "Balaya",
+      "createdAt": "2026-07-01T19:20:52.157Z"
+    },
+    {
+      "id": "1782933652159-u4ei5tgal-thalapath",
+      "name": "Thalapath",
+      "createdAt": "2026-07-01T19:20:52.159Z"
+    },
+    {
+      "id": "1782933652159-9bvwi9pts-paraw",
+      "name": "Paraw",
+      "createdAt": "2026-07-01T19:20:52.159Z"
+    },
+    {
+      "id": "1782933652159-rbjzk30eo-salaya",
+      "name": "Salaya",
+      "createdAt": "2026-07-01T19:20:52.159Z"
+    },
+    {
+      "id": "1782933652159-mp683zw2p-kelawalla",
+      "name": "Kelawalla",
+      "createdAt": "2026-07-01T19:20:52.159Z"
+    },
+    {
+      "id": "1782933652159-uez9ibtr6-soorai",
+      "name": "Soorai",
+      "createdAt": "2026-07-01T19:20:52.159Z"
+    },
+    {
+      "id": "1782933652159-7hh35p1rw-thora",
+      "name": "Thora",
+      "createdAt": "2026-07-01T19:20:52.159Z"
+    },
+    {
+      "id": "1782934311944-n91i9n5ba",
+      "name": "malu",
+      "createdAt": "2026-07-01T19:31:51.944Z"
+    }
+  ],
+  "fisheries_catch_entries": [],
+  "fisheries_daily_fish_prices": [
+    {
+      "id": "1782933871947-pk5ta3src",
+      "fishVarietyId": "1782933652157-8q3h1zvv8-balaya",
+      "date": "2026-07-02",
+      "pricePerKg": 190,
+      "enteredAt": "2026-07-01T19:24:31.947Z"
+    },
+    {
+      "id": "1782933883589-sug441b66",
+      "fishVarietyId": "1782933652159-9bvwi9pts-paraw",
+      "date": "2026-07-02",
+      "pricePerKg": 23,
+      "enteredAt": "2026-07-01T19:24:43.589Z"
+    }
+  ],
+  "fisheries_expenses": [],
+  "fisheries_weekly_settlements": [],
+  "fisheries_seller_invoices": [
+    {
+      "id": "1782933766368-3kh1uhsmx",
+      "date": "2026-07-02",
+      "catchByVariety": [
+        {
+          "varietyId": "1782933652157-8q3h1zvv8-balaya",
+          "varietyName": "Balaya",
+          "totalWeightKg": 12,
+          "employees": [
+            {
+              "employeeId": "1782933688663-w2yn3ktqd",
+              "weightKg": 12
+            }
+          ]
+        },
+        {
+          "varietyId": "1782933652159-9bvwi9pts-paraw",
+          "varietyName": "Paraw",
+          "totalWeightKg": 123,
+          "employees": [
+            {
+              "employeeId": "1782933688663-w2yn3ktqd",
+              "weightKg": 123
+            }
+          ]
+        }
+      ],
+      "totalWeightKg": 135,
+      "createdAt": "2026-07-01T19:22:46.368Z",
+      "updatedAt": "2026-07-01T19:22:46.368Z"
+    },
+    {
+      "id": "1782934031716-t29871ur9",
+      "date": "2026-07-03",
+      "catchByVariety": [
+        {
+          "varietyId": "1782933652159-u4ei5tgal-thalapath",
+          "varietyName": "Thalapath",
+          "totalWeightKg": 12,
+          "employees": [
+            {
+              "employeeId": "1782933688663-w2yn3ktqd",
+              "weightKg": 12
+            }
+          ]
+        },
+        {
+          "varietyId": "1782933652157-8q3h1zvv8-balaya",
+          "varietyName": "Balaya",
+          "totalWeightKg": 12,
+          "employees": [
+            {
+              "employeeId": "1782933964258-cxa65zn99",
+              "weightKg": 12
+            }
+          ]
+        }
+      ],
+      "totalWeightKg": 24,
+      "createdAt": "2026-07-01T19:27:11.716Z",
+      "updatedAt": "2026-07-01T19:27:11.716Z"
+    }
+  ]
+}
