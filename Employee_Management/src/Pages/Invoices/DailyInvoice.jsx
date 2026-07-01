@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import logoImg from '../../assets/Images/KDTlogo.png';
 import { format, parseISO } from 'date-fns';
 import {
   Printer, FileText, Users, User, ChevronDown, Package,
@@ -62,6 +63,15 @@ function EmployeeInvoiceCard({ employee, catches, expenses, fishVarieties, date 
 
   return (
     <div className="print-area bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden mb-6 print:mb-0 print:break-inside-avoid print:shadow-none print:rounded-none print:border-black">
+      {/* Brand Header */}
+      <div className="px-6 py-3 border-b border-gray-100 bg-slate-50/50 flex items-center justify-between print:bg-white print:border-b-2 print:border-black">
+        <div className="flex items-center gap-2">
+          <img src={logoImg} alt="KDT Logo" className="w-6 h-6 object-contain bg-white rounded p-0.5 border border-gray-200 shrink-0" />
+          <span className="text-xs font-bold text-brand-dark font-display tracking-wide">KDT SEA FOOD</span>
+        </div>
+        <span className="text-[10px] text-brand-gray uppercase tracking-wider font-semibold">Daily Invoice</span>
+      </div>
+
       {/* Header */}
       <div className="bg-gradient-to-r from-brand-teal to-brand-teal-dark text-white px-6 py-5 print:bg-white print:text-black print:border-b-2 print:border-black">
         <div className="flex items-center justify-between">

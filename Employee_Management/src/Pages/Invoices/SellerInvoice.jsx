@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import logoImg from '../../assets/Images/KDTlogo.png';
 import { format, parseISO } from 'date-fns';
 import { Printer, FileText, ChevronDown, ChevronUp, Package, RefreshCw } from 'lucide-react';
 import { useData } from '../../context/DataContext.jsx';
@@ -177,14 +178,21 @@ export default function SellerInvoice() {
             {/* Invoice Header */}
             <div className="bg-gradient-to-br from-brand-teal to-brand-teal-dark text-white px-8 py-7 print:bg-white print:text-black print:border-b-2 print:border-black">
               <div className="flex items-start justify-between">
-                <div>
-                  <p className="text-xs font-semibold tracking-[0.25em] uppercase opacity-70 mb-1">
-                    Seller Invoice
-                  </p>
-                  <h2 className="text-2xl font-display font-bold tracking-tight">
-                    KDT SEA FOOD
-                  </h2>
-                  <p className="text-sm opacity-75 mt-1">Karaitheevu, Kalmunai</p>
+                <div className="flex items-center gap-4">
+                  <img
+                    src={logoImg}
+                    alt="KDT Logo"
+                    className="w-14 h-14 object-contain bg-white rounded-xl p-1 shrink-0 shadow-sm print:border print:border-gray-200"
+                  />
+                  <div>
+                    <p className="text-xs font-semibold tracking-[0.25em] uppercase opacity-70 mb-1">
+                      Seller Invoice
+                    </p>
+                    <h2 className="text-2xl font-display font-bold tracking-tight">
+                      KDT SEA FOOD
+                    </h2>
+                    <p className="text-sm opacity-75 mt-1">Karaitheevu, Kalmunai</p>
+                  </div>
                 </div>
                 <div className="text-right">
                   <p className="text-xs opacity-60 uppercase tracking-wide mb-1">Date</p>

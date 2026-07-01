@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import logoImg from '../../assets/Images/KDTlogo.png';
 import {
   format, parseISO, startOfWeek, endOfWeek, addWeeks, subWeeks, eachDayOfInterval,
 } from 'date-fns';
@@ -80,6 +81,15 @@ function SettlementCard({
 
   return (
     <div className="print-card bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden print:shadow-none print:rounded-none print:border-black print:break-inside-avoid print:mb-4">
+      {/* Brand Header */}
+      <div className="px-6 py-3 border-b border-gray-100 bg-slate-50/50 flex items-center justify-between print:bg-white print:border-b-2 print:border-black">
+        <div className="flex items-center gap-2">
+          <img src={logoImg} alt="KDT Logo" className="w-6 h-6 object-contain bg-white rounded p-0.5 border border-gray-200 shrink-0" />
+          <span className="text-xs font-bold text-brand-dark font-display tracking-wide">KDT SEA FOOD</span>
+        </div>
+        <span className="text-[10px] text-brand-gray uppercase tracking-wider font-semibold">Weekly Settlement</span>
+      </div>
+
       {/* Card Header */}
       <div className="px-6 py-4 bg-gradient-to-r from-slate-50 to-white border-b border-gray-100 print:bg-white">
         <div className="flex items-center justify-between">
