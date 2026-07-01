@@ -1,59 +1,6 @@
 import { useState } from 'react'
 import { Anchor, Eye, EyeOff } from 'lucide-react'
-
-// KDT Sea Food branding logo
-const KDTLogo = ({ className = "h-16 w-auto" }) => (
-  <svg viewBox="0 0 300 240" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
-    {/* Fish at the top */}
-    <g transform="translate(65, 10)">
-      {/* Red fins */}
-      <path d="M 60 25 L 50 15 L 70 20 Z" fill="#ef4444" />
-      <path d="M 90 42 L 80 52 L 100 48 Z" fill="#ef4444" />
-      {/* Yellow fish body */}
-      <path d="M 10 35 Q 50 10, 120 25 Q 140 30, 150 35 Q 120 50, 60 45 Z" fill="#f59e0b" />
-      {/* Tail fin */}
-      <path d="M 10 35 L -10 20 L -2 35 L -10 50 Z" fill="#f59e0b" />
-      {/* Eye */}
-      <circle cx="135" cy="31" r="2" fill="#000000" />
-      {/* Gill lines */}
-      <path d="M 120 30 Q 115 35, 120 40" stroke="#b45309" strokeWidth="1.5" strokeLinecap="round" />
-    </g>
-    
-    {/* "KDT" block letters */}
-    <g transform="translate(30, 75)">
-      {/* K */}
-      <path d="M 10 10 V 70 H 26 V 45 L 55 70 H 75 L 42 40 L 70 10 H 50 L 26 33 V 10 H 10 Z" fill="#f59e0b" />
-      
-      {/* D */}
-      <path d="M 85 10 V 70 H 125 C 150 70, 160 55, 160 40 C 160 25, 150 10, 125 10 H 85 Z M 111 26 H 125 C 137 26, 142 32, 142 40 C 142 48, 137 54, 125 54 H 111 V 26 Z" fill="#ea580c" />
-      
-      {/* T */}
-      <path d="M 170 10 V 26 H 198 V 70 H 218 V 26 H 246 V 10 H 170 Z" fill="#f59e0b" />
-    </g>
-    
-    {/* "Sea food" script */}
-    <text 
-      x="145" 
-      y="185" 
-      textAnchor="middle" 
-      fill="#ea580c" 
-      style={{ fontFamily: "'Dancing Script', 'Brush Script MT', 'Pacifico', cursive", fontSize: "44px", fontWeight: "bold" }}
-    >
-      Sea food
-    </text>
-    
-    {/* Tagline */}
-    <text 
-      x="145" 
-      y="218" 
-      textAnchor="middle" 
-      fill="#84cc16" 
-      style={{ fontFamily: "'Inter', sans-serif", fontSize: "11px", fontWeight: "bold", letterSpacing: "0.5px" }}
-    >
-      Taste The Sea, at its Freshest.
-    </text>
-  </svg>
-)
+import logoImg from '../assets/Images/logo.png'
 
 // High-fidelity vector illustration of the Wellagama Harbor fishing boat
 const BoatIllustration = () => (
@@ -200,7 +147,7 @@ export default function Landing({ onLoginSuccess }) {
 
         {/* Brand Header */}
         <div className="flex items-center gap-2 relative z-10">
-          <KDTLogo className="h-20 w-auto drop-shadow-md" />
+          <img src={logoImg} alt="KDT Sea Food" className="h-16 lg:h-20 w-auto object-contain drop-shadow-md" />
           <div className="border-l border-slate-700/50 pl-4 py-1">
             <p className="text-[10px] tracking-[0.2em] font-bold text-teal-400/90 uppercase">
               Fisheries
