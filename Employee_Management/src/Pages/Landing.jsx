@@ -319,20 +319,7 @@ export default function Landing({ onLoginSuccess }) {
               ) : (
                 'Sign In'
               )}
-            </button>
           </form>
-
-          {/* Demo Access Card */}
-          <div className="p-4 rounded-xl border border-teal-500/20 bg-teal-500/[0.02] space-y-1">
-            <p className="text-[10px] tracking-wider font-bold text-teal-600/80 uppercase">
-              Demo Access
-            </p>
-            <p className="text-xs text-brand-dark/80">
-              <span className="font-semibold text-slate-700">admin@fisheries.lk</span>
-              <span className="mx-1.5 text-slate-400">/</span>
-              <span className="italic text-slate-500">any password</span>
-            </p>
-          </div>
         </div>
 
         {/* Footer */}
