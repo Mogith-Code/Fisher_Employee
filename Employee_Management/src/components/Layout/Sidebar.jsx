@@ -31,11 +31,11 @@ const navItems = [
 export default function Sidebar({ collapsed, onToggle, mobileOpen, onCloseMobile }) {
   return (
     <aside
-      className={`fixed top-0 left-0 z-50 h-screen flex flex-col bg-[#032c38] text-white select-none
-        transition-transform duration-300 ease-in-out lg:z-40
-        ${mobileOpen ? 'mobile-sidebar-open' : 'mobile-sidebar-hidden'}`}
+      className="responsive-sidebar fixed top-0 left-0 z-50 h-screen flex flex-col bg-[#032c38] text-white select-none
+        transition-transform duration-300 ease-in-out lg:z-40"
       style={{
         width: collapsed ? 72 : 260,
+        '--sidebar-translate': mobileOpen ? '0%' : '-100%',
       }}
     >
       {/* ── Logo area ── */}

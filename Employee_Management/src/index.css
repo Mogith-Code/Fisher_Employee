@@ -35,13 +35,12 @@ h1, h2, h3, h4, h5, h6 {
 .transition-all-custom {
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 /* Responsive Mobile Sidebar drawer helpers */
+aside.responsive-sidebar {
+  transform: var(--sidebar-transform, none);
+}
 @media (max-width: 1023px) {
-  .mobile-sidebar-hidden {
-    transform: translateX(-100%) !important;
-  }
-  .mobile-sidebar-open {
-    transform: translateX(0) !important;
+  aside.responsive-sidebar {
+    --sidebar-transform: translateX(var(--sidebar-translate, -100%)) !important;
   }
 }
