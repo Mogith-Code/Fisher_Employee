@@ -28,14 +28,18 @@ const navItems = [
   { label: 'Settings', icon: Settings, path: '/settings' },
 ];
 
-export default function Sidebar({ collapsed, onToggle, mobileOpen, onCloseMobile }) {
+export default function Sidebar({ collapsed, onToggle, mobileOpen, onCloseMobile, isDesktop }) {
+  const transform = isDesktop
+    ? 'none'
+    : (mobileOpen ? 'translateX(0)' : 'translateX(-100%)');
+
   return (
     <aside
-      className="responsive-sidebar fixed top-0 left-0 z-50 h-screen flex flex-col bg-[#032c38] text-white select-none
+      className="fixed top-0 left-0 z-50 h-screen flex flex-col bg-[#032c38] text-white select-none
         transition-transform duration-300 ease-in-out lg:z-40"
       style={{
         width: collapsed ? 72 : 260,
-        '--sidebar-translate': mobileOpen ? '0%' : '-100%',
+        transform,
       }}
     >
       {/* ── Logo area ── */}

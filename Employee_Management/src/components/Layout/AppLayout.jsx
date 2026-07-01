@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import TopBar from './TopBar';
@@ -16,10 +16,24 @@ const routeTitles = {
   '/settings': 'Settings',
 };
 
+const LG_BREAKPOINT = 1024;
+
 export default function AppLayout({ title: titleProp }) {
   const location = useLocation();
   const [collapsed, setCollapsed] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(
+    () => typeof window !== 'undefined' && window.innerWidth >= LG_BREAKPOINT
+  );
+
+  /* Track viewport width */
+  useEffect(() => {
+    const mql = window.matchMedia(`(min-width: ${LG_BREAKPOINT}px)`);
+    const handler = (e) => setIsDesktop(e.matches);
+    mql.addEventListener('change', handler);
+    setIsDesktop(mql.matches);
+    return () => mql.removeEventListener('change', handler);
+  }, []);
 
   /* Derive title from route if not provided */
   const pageTitle =
@@ -51,6 +65,7 @@ export default function AppLayout({ title: titleProp }) {
         onToggle={() => setCollapsed(!collapsed)}
         mobileOpen={mobileOpen}
         onCloseMobile={closeMobile}
+        isDesktop={isDesktop}
       />
 
       {/* ── Main Content Area ── */}
