@@ -319,6 +319,7 @@ export default function Landing({ onLoginSuccess }) {
               ) : (
                 'Sign In'
               )}
+            </button>
           </form>
         </div>
 
