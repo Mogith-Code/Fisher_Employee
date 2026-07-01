@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import logoImg from '../../assets/Images/KDTlogo.png';
 import {
   LayoutDashboard,
   Users,
@@ -37,9 +38,11 @@ export default function Sidebar({ collapsed, onToggle }) {
     >
       {/* ── Logo area ── */}
       <div className="flex items-center gap-3 px-5 h-16 shrink-0 border-b border-white/10">
-        <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-teal-400 to-cyan-500 flex items-center justify-center shrink-0 shadow-lg shadow-teal-500/20">
-          <Anchor size={18} className="text-white" />
-        </div>
+        <img
+          src={logoImg}
+          alt="KDT Logo"
+          className="w-9 h-9 rounded-lg object-contain bg-white p-0.5 shrink-0 shadow-md"
+        />
 
         <div
           className="overflow-hidden whitespace-nowrap"
