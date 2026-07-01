@@ -81,15 +81,17 @@ export default function SellerInvoice() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedDate, refreshKey]);
 
-  const handleGenerate = () => {
+  const handleGenerate = async () => {
     if (!selectedDate) return;
     setGenerating(true);
-    // Small delay for UX feedback
-    setTimeout(() => {
-      const result = generateSellerInvoice(selectedDate);
+    try {
+      const result = await generateSellerInvoice(selectedDate);
       setInvoice(result);
+    } catch (err) {
+      console.error(err);
+    } finally {
       setGenerating(false);
-    }, 400);
+    }
   };
 
   const handlePrint = () => {
@@ -199,53 +201,55 @@ export default function SellerInvoice() {
             {/* Invoice Body */}
             <div className="px-8 py-6">
               {/* Table */}
-              <table className="w-full">
-                <thead>
-                  <tr className="border-b-2 border-brand-dark/10">
-                    <th className="text-left py-3 text-xs font-bold text-brand-dark/60 uppercase tracking-wider">
-                      #
-                    </th>
-                    <th className="text-left py-3 text-xs font-bold text-brand-dark/60 uppercase tracking-wider">
-                      Fish Variety
-                    </th>
-                    <th className="text-right py-3 text-xs font-bold text-brand-dark/60 uppercase tracking-wider">
-                      Total Weight (kg)
-                    </th>
-                    <th className="text-left py-3 pl-6 text-xs font-bold text-brand-dark/60 uppercase tracking-wider print:hidden">
-                      Breakdown
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {displayInvoice.catchByVariety.map((item, idx) => (
-                    <tr
-                      key={item.varietyId}
-                      className="border-b border-gray-100 last:border-b-0 hover:bg-slate-50/50 transition-colors"
-                    >
-                      <td className="py-3.5 text-sm text-brand-gray font-mono">
-                        {String(idx + 1).padStart(2, '0')}
-                      </td>
-                      <td className="py-3.5">
-                        <span className="text-sm font-semibold text-brand-dark">
-                          {item.varietyName}
-                        </span>
-                      </td>
-                      <td className="py-3.5 text-right">
-                        <span className="text-sm font-bold font-mono text-brand-dark">
-                          {item.totalWeightKg.toFixed(1)}
-                        </span>
-                        <span className="text-xs text-brand-gray ml-1">kg</span>
-                      </td>
-                      <td className="py-3.5 pl-6">
-                        <EmployeeBreakdown
-                          employees={item.employees}
-                          getEmployeeById={getEmployeeById}
-                        />
-                      </td>
+              <div className="overflow-x-auto">
+                <table className="w-full min-w-[500px]">
+                  <thead>
+                    <tr className="border-b-2 border-brand-dark/10">
+                      <th className="text-left py-3 text-xs font-bold text-brand-dark/60 uppercase tracking-wider">
+                        #
+                      </th>
+                      <th className="text-left py-3 text-xs font-bold text-brand-dark/60 uppercase tracking-wider">
+                        Fish Variety
+                      </th>
+                      <th className="text-right py-3 text-xs font-bold text-brand-dark/60 uppercase tracking-wider">
+                        Total Weight (kg)
+                      </th>
+                      <th className="text-left py-3 pl-6 text-xs font-bold text-brand-dark/60 uppercase tracking-wider print:hidden">
+                        Breakdown
+                      </th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {displayInvoice.catchByVariety.map((item, idx) => (
+                      <tr
+                        key={item.varietyId}
+                        className="border-b border-gray-100 last:border-b-0 hover:bg-slate-50/50 transition-colors"
+                      >
+                        <td className="py-3.5 text-sm text-brand-gray font-mono">
+                          {String(idx + 1).padStart(2, '0')}
+                        </td>
+                        <td className="py-3.5">
+                          <span className="text-sm font-semibold text-brand-dark">
+                            {item.varietyName}
+                          </span>
+                        </td>
+                        <td className="py-3.5 text-right">
+                          <span className="text-sm font-bold font-mono text-brand-dark">
+                            {item.totalWeightKg.toFixed(1)}
+                          </span>
+                          <span className="text-xs text-brand-gray ml-1">kg</span>
+                        </td>
+                        <td className="py-3.5 pl-6">
+                          <EmployeeBreakdown
+                            employees={item.employees}
+                            getEmployeeById={getEmployeeById}
+                          />
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
 
               {/* Grand Total */}
               <div className="mt-6 pt-4 border-t-2 border-brand-dark/10">

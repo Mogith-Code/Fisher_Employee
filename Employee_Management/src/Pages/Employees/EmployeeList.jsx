@@ -126,7 +126,7 @@ export default function EmployeeList() {
                   onClick={(e) => toggleContextMenu(e, emp.id)}
                   className="absolute top-3 right-3 p-1.5 rounded-lg text-gray-300
                     hover:text-brand-gray hover:bg-gray-100 transition-all-custom cursor-pointer
-                    opacity-0 group-hover:opacity-100 z-10"
+                    opacity-100 lg:opacity-0 lg:group-hover:opacity-100 z-10"
                   style={{ opacity: contextMenuId === emp.id ? 1 : undefined }}
                 >
                   <MoreVertical className="w-4 h-4" />
