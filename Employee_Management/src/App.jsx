@@ -25,7 +25,7 @@ function App() {
         <div className="space-y-2">
           <h2 className="text-2.5xl font-bold tracking-tight text-brand-dark font-display">Authenticated</h2>
           <p className="text-brand-gray text-sm">
-            Welcome to Wellagama Harbor Fisheries Management System dashboard.
+            Welcome to KDT SEA FOOD Fisheries Management System dashboard.
           </p>
         </div>
         <div className="bg-brand-ivory p-4 rounded-xl text-left border border-slate-200/50">

@@ -151,7 +151,7 @@ export default function Landing({ onLoginSuccess }) {
           </div>
           <div>
             <p className="text-[10px] tracking-[0.2em] font-bold text-teal-400/90 uppercase">
-              Wellagama Harbor
+              KDT SEA FOOD
             </p>
             <h2 className="text-lg font-bold tracking-tight text-slate-100 font-display">
               Fisheries Management System
@@ -326,7 +326,7 @@ export default function Landing({ onLoginSuccess }) {
         {/* Footer */}
         <div className="w-full max-w-[420px] mx-auto text-center mt-12 lg:mt-0">
           <p className="text-[10.5px] tracking-wide text-brand-gray/80">
-            © 2026 Fisheries Management System · Wellagama, Sri Lanka
+            © 2026 Fisheries Management System · Karaitheevu, Kalamunai
           </p>
         </div>
       </section>
